@@ -8,6 +8,8 @@ import (
 	"gorm.io/gorm"
 )
 
+// Ao usar o gorm.Model, o ID do registro é gerado automaticamente, por isso não é necessário passar o ID como parâmetro.
+// O gorm.Model possui o campo deleted_at, ativando por padrão o uso do Soft Delete.
 type Product struct {
 	gorm.Model
 	Code  string
